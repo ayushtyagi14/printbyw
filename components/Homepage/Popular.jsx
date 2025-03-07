@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 import React from "react";
 
 const Popular = () => {
@@ -14,14 +15,19 @@ const Popular = () => {
   ];
 
   return (
-    <div className="w-[95%] lg:max-w-screen-xl mx-auto mb-16 text-center">
+    <motion.div
+      className="w-[95%] lg:max-w-screen-xl mx-auto mb-16 text-center"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <h1 className="text-[32px] md:text-[48px] font-black">
         Popular Printing Solutions
       </h1>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mx-auto mt-16">
         {solutions.map((service, index) => (
-          <div
+          <motion.div
             key={index}
             className="relative h-[300px] md:h-[400px] overflow-hidden rounded-[24px] cursor-pointer group shadow"
           >
@@ -34,19 +40,27 @@ const Popular = () => {
               <h1 className="text-lg font-semibold">{service.title}</h1>
               <ArrowUpRight className="ml-2" />
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       <div className="mt-8 flex gap-4 justify-center">
-        <button className="bg-[#1e1e24] text-white px-6 py-3 rounded-full hover:scale-95 transition ease-in-out cursor-pointer">
+        <motion.button
+          className="bg-[#1e1e24] text-white px-6 py-3 rounded-full hover:scale-95 transition ease-in-out cursor-pointer"
+          whileHover={{ scale: 0.95 }}
+          transition={{ duration: 0.3 }}
+        >
           Browse all products
-        </button>
-        <button className="text-[#1e1e24] px-6 py-3 rounded-full hover:scale-95 transition ease-in-out cursor-pointer shadow">
+        </motion.button>
+        <motion.button
+          className="text-[#1e1e24] px-6 py-3 rounded-full hover:scale-95 transition ease-in-out cursor-pointer shadow"
+          whileHover={{ scale: 0.95 }}
+          transition={{ duration: 0.3 }}
+        >
           Get in touch
-        </button>
+        </motion.button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

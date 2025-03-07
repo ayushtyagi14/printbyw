@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Gallery = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -7,7 +8,12 @@ const Gallery = () => {
     <div className="w-[95%] lg:max-w-screen-xl mx-auto mb-16 text-center">
       <h1 className="text-[32px] md:text-[48px] font-black">Our Gallery</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         {/* Main Large Image */}
         <img
           src="/assets/gallery1.jpg"
@@ -62,7 +68,7 @@ const Gallery = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
