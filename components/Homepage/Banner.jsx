@@ -7,9 +7,9 @@ const Banner = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-[95%] lg:max-w-screen-xl mx-auto mt-28 mb-20 bg-[#718dff] rounded-[24px] p-8 grid grid-cols-1 md:grid-cols-2 gap-8"
+      className="w-[95%] lg:max-w-screen-xl mx-auto mt-28 mb-20 bg-teal rounded-[24px] p-8 grid grid-cols-1 md:grid-cols-2 gap-8"
     >
-      <div className="flex flex-col items-start gap-8 text-white">
+      <div className="flex flex-col justify-between items-start text-white">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const Banner = () => {
         <img
           src="/assets/banner.webp"
           alt="Banner Image"
-          className="w-[350px] rounded-[24px]"
+          className="w-[330px] rounded-[24px]"
         />
       </motion.div>
     </motion.div>

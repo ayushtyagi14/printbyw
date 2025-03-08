@@ -81,7 +81,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-        className="relative bg-[#718dff] w-full py-16 -mt-60 flex flex-col items-center text-center text-white"
+        className="relative bg-teal w-full py-16 -mt-60 flex flex-col items-center text-center text-white"
       >
         <div className="max-w-6xl w-full grid grid-cols-2 md:grid-cols-4 gap-6 px-6 md:px-16 mt-60">
           {[

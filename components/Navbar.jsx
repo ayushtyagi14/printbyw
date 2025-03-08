@@ -284,12 +284,12 @@ const Navbar = () => {
       <NavigationMenu className="hidden md:flex relative container max-w-screen-lg">
         <NavigationMenuList className="flex space-x-3 font-medium">
           <NavigationMenuItem>
-            <NavigationMenuLink href="#" className="hover:text-[#718dff]">
+            <NavigationMenuLink href="#" className="hover:text-teal">
               Home
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="#" className="hover:text-[#718dff]">
+            <NavigationMenuLink href="#" className="hover:text-teal">
               About
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -309,7 +309,7 @@ const Navbar = () => {
                     <NavigationMenuLink
                       key={i}
                       href="#"
-                      className="block text-gray-600 hover:text-[#718dff] whitespace-nowrap"
+                      className="block text-gray-600 hover:text-teal whitespace-nowrap"
                     >
                       {item}
                     </NavigationMenuLink>
@@ -334,7 +334,7 @@ const Navbar = () => {
                     <NavigationMenuLink
                       key={i}
                       href="#"
-                      className="block text-gray-600 hover:text-[#718dff] whitespace-nowrap"
+                      className="block text-gray-600 hover:text-teal whitespace-nowrap"
                     >
                       {item}
                     </NavigationMenuLink>
@@ -345,7 +345,7 @@ const Navbar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink href="#" className="hover:text-[#718dff]">
+            <NavigationMenuLink href="#" className="hover:text-teal">
               Contact Us
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -367,10 +367,10 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full h-screen overflow-scroll bg-white shadow-md p-4 flex flex-col space-y-3 justify-between md:hidden z-[110]">
-          <a href="#" className="hover:text-[#718dff] text-[20px]">
+          <a href="#" className="hover:text-teal text-[20px]">
             Home
           </a>
-          <a href="#" className="hover:text-[#718dff] text-[20px]">
+          <a href="#" className="hover:text-teal text-[20px]">
             About
           </a>
 
@@ -402,7 +402,7 @@ const Navbar = () => {
                         <a
                           key={i}
                           href="#"
-                          className="block text-gray-600 hover:text-[#718dff] text-sm"
+                          className="block text-gray-600 hover:text-teal text-sm"
                         >
                           {item}
                         </a>
@@ -442,7 +442,7 @@ const Navbar = () => {
                         <a
                           key={i}
                           href="#"
-                          className="block text-gray-600 hover:text-[#718dff] text-sm"
+                          className="block text-gray-600 hover:text-teal text-sm"
                         >
                           {item}
                         </a>
@@ -454,7 +454,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a href="#" className="hover:text-[#718dff] text-[20px]">
+          <a href="#" className="hover:text-teal text-[20px]">
             Contact Us
           </a>
 

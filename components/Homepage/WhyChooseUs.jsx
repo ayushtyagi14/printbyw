@@ -55,7 +55,7 @@ const WhyChooseUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="text-[#718dff] bg-[#eaf0ff] p-4 rounded-full text-4xl">
+            <div className="text-teal bg-[#DBF6FA] p-4 rounded-full text-4xl">
               {feature.icon}
             </div>
             <h2 className="mt-4 text-lg font-semibold">{feature.title}</h2>

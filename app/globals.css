@@ -2,6 +2,13 @@
 
 /* @plugin "tailwindcss-animate"; */
 
+@theme {
+  --color-primary: #f5f5f7;
+  --color-secondary: #000000;
+  --color-orange: #e67e22;
+  --color-teal: #16A0B6;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 body {
