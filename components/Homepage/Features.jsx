@@ -17,18 +17,18 @@ const Features = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.h1
-        className="text-center text-[32px] md:text-[48px] font-black"
+        className="text-center text-[32px] lg:text-[48px] font-black"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       >
         Featured Services
       </motion.h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mx-auto mt-8">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="relative h-[300px] md:h-[400px] overflow-hidden rounded-[24px] cursor-pointer group shadow"
+            className="relative h-[300px] lg:h-[400px] overflow-hidden rounded-[24px] cursor-pointer group shadow"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}

@@ -21,15 +21,15 @@ const Popular = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <h1 className="text-[32px] md:text-[48px] font-black">
+      <h1 className="text-[32px] lg:text-[48px] font-black">
         Popular Printing Solutions
       </h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mx-auto mt-16">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 mx-auto mt-16">
         {solutions.map((service, index) => (
           <motion.div
             key={index}
-            className="relative h-[300px] md:h-[400px] overflow-hidden rounded-[24px] cursor-pointer group shadow"
+            className="relative h-[300px] lg:h-[400px] overflow-hidden rounded-[24px] cursor-pointer group shadow"
           >
             <img
               src={service.image}

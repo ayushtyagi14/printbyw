@@ -13,10 +13,12 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto p-3 w-full ">
+      <div className="max-w-screen-2xl mx-auto p-3 w-full ">
         <Navbar />
       </div>
-      <Hero />
+      <div className="-mt-24">
+        <Hero />
+      </div>
       <Features />
       <WhyChooseUs />
       <Testimonials />

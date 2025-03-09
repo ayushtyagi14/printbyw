@@ -45,20 +45,20 @@ const Testimonials = () => {
       className="bg-white py-10 mt-28 mb-16"
     >
       <motion.div
-        className="w-[95%] lg:max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"
+        className="w-[95%] lg:max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6"
         variants={fadeInUp}
       >
         <motion.div
-          className="flex flex-col gap-6 md:mt-[7rem]"
+          className="flex flex-col gap-6 lg:mt-[7rem]"
           variants={fadeInUp}
         >
-          <h1 className="text-[24px] text-center md:text-left md:text-[32px] font-black leading-tight">
+          <h1 className="text-[24px] text-center lg:text-left lg:text-[32px] font-black leading-tight">
             Printing Excellence, Proven by Experience.
           </h1>
-          <p className="text-center md:text-left text-gray-600">
+          <p className="text-center lg:text-left text-gray-600">
             Turning Ideas into Prints, and Customers into Fans.
           </p>
-          <div className="flex gap-4 justify-center md:justify-start">
+          <div className="flex gap-4 justify-center lg:justify-start">
             <button className="bg-[#1e1e24] text-white px-6 py-3 rounded-full hover:scale-95 transition ease-in-out cursor-pointer">
               Browse all products
             </button>
@@ -102,7 +102,7 @@ const Testimonials = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-col items-center gap-6 md:mt-16"
+          className="flex flex-col items-center gap-6 lg:mt-16"
           variants={fadeInUp}
         >
           {testimonials.slice(2, 4).map((testimonial, index) => (

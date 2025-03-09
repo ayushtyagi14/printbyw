@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
   return (
     <div className="w-[95%] lg:max-w-screen-xl mx-auto my-28 text-center">
       <motion.h1
-        className="text-[32px] md:text-[48px] font-black"
+        className="text-[32px] lg:text-[48px] font-black"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
         We deliver top-notch printing services tailored to your needs.
       </motion.p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
         {features.map((feature, index) => (
           <motion.div
             key={index}

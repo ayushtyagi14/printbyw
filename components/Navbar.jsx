@@ -276,12 +276,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center rounded-[12px] relative w-full">
+    <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center rounded-[12px] relative w-full z-20">
       {/* Logo */}
       <div className="text-2xl font-black">PrintByW</div>
 
       {/* Desktop Menu */}
-      <NavigationMenu className="hidden md:flex relative container max-w-screen-lg">
+      <NavigationMenu className="hidden lg:flex relative container max-w-screen-xl z-[110]">
         <NavigationMenuList className="flex space-x-3 font-medium">
           <NavigationMenuItem>
             <NavigationMenuLink href="#" className="hover:text-teal">
@@ -299,7 +299,7 @@ const Navbar = () => {
             <NavigationMenuTrigger className="flex items-center">
               Products
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="absolute left-0 right-0 md:w-[80vw] bg-white shadow-lg grid gap-3 p-4 grid-cols-5">
+            <NavigationMenuContent className="absolute left-0 right-0 lg:w-[80vw] bg-white shadow-lg grid gap-3 p-4 grid-cols-5">
               {Object.entries(products).map(([category, items], index) => (
                 <div key={index}>
                   <h3 className="font-semibold text-gray-700 mb-2">
@@ -324,7 +324,7 @@ const Navbar = () => {
             <NavigationMenuTrigger className="flex items-center">
               Services
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="absolute left-0 right-0 md:w-[80vw] bg-white shadow-lg grid gap-3 p-4 grid-cols-4">
+            <NavigationMenuContent className="absolute left-0 right-0 lg:w-[80vw] bg-white shadow-lg grid gap-3 p-4 grid-cols-4">
               {Object.entries(services).map(([category, items], index) => (
                 <div key={index}>
                   <h3 className="font-semibold text-gray-700 mb-2">
@@ -352,13 +352,13 @@ const Navbar = () => {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <button className="bg-[#1e1e24] text-white px-4 py-2 rounded-full hover:scale-95 cursor-pointer transition ease-in-out hidden md:flex">
+      <button className="bg-[#1e1e24] text-white px-4 py-2 rounded-full hover:scale-95 cursor-pointer transition ease-in-out hidden lg:flex">
         Get In Touch
       </button>
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden flex items-center text-gray-700"
+        className="lg:hidden flex items-center text-gray-700"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -366,7 +366,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full h-screen overflow-scroll bg-white shadow-md p-4 flex flex-col space-y-3 justify-between md:hidden z-[110]">
+        <div className="absolute top-full left-0 w-full h-screen overflow-scroll bg-white shadow-md p-4 flex flex-col space-y-3 justify-between lg:hidden z-[110] -mt-3">
           <a href="#" className="hover:text-teal text-[20px]">
             Home
           </a>

@@ -15,11 +15,11 @@ const Footer = () => {
       <div className="w-[95%] lg:max-w-screen-xl mx-auto">
         {/* Contact Form */}
         <div className="w-[95%] lg:max-w-screen-md mx-auto mb-10 p-6 bg-[#000000] rounded-lg">
-          <h2 className="text-[28px] md:text-[40px] font-black mb-4 text-center text-white">
+          <h2 className="text-[28px] lg:text-[40px] font-black mb-4 text-center text-white">
             Get a Quote
           </h2>
           <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <Input
                 type="text"
                 placeholder="Your Name"
@@ -33,7 +33,7 @@ const Footer = () => {
                 className="bg-[#252525] text-white border border-gray-700 placeholder-gray-400"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <Input
                 type="tel"
                 placeholder="Your Phone"
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Content */}
-        <div className="w-[95%] lg:max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="w-[95%] lg:max-w-screen-xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h2 className="text-lg font-bold">PrintByW</h2>
