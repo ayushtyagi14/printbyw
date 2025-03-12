@@ -68,7 +68,7 @@ const Hero = () => {
             </motion.button>
           </div>
 
-          <div className="relative w-full flex justify-center mx-auto">
+          {/* <div className="relative w-full flex justify-center mx-auto"> */}
             {/* <div className="w-[400px] h-[400px] relative">
               <AnimatePresence>
                 <motion.img
@@ -84,7 +84,7 @@ const Hero = () => {
               </AnimatePresence>
             </div> */}
             {/* <RollingGallery autoplay={true} pauseOnHover={false} /> */}
-          </div>
+          {/* </div> */}
         </motion.div>
       </div>
 

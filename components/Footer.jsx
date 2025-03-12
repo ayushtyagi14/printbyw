@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="bg-black text-white py-10">
       <div className="w-[95%] lg:max-w-screen-xl mx-auto">
         {/* Contact Form */}
-        <div className="w-[95%] lg:max-w-screen-md mx-auto mb-10 p-6 bg-[#000000] rounded-lg">
+        <div className="w-[95%] lg:max-w-screen-lg mx-auto mb-10 p-6 bg-[#000000] rounded-lg">
           <h2 className="text-[28px] lg:text-[40px] font-black mb-4 text-center text-white">
             Get a Quote
           </h2>

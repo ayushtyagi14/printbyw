@@ -7,7 +7,7 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
-import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, ChevronUp, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -133,31 +133,6 @@ const Navbar = () => {
       "Event Backdrops",
       "Guest Books",
     ],
-    "Technology & Digital": [
-      "QR Code Stickers",
-      "Digital Business Cards",
-      "Smart NFC Cards",
-      "Branded USB Sticks",
-      "AR-Enhanced Prints",
-      "Interactive Print Materials",
-      "E-Gift Cards",
-      "Branded Website Templates",
-    ],
-  };
-
-  const services = {
-    "Graphic Design": [
-      "Logo Design",
-      "Brand Identity",
-      "Custom Illustrations",
-      "Business Card Design",
-      "Flyer & Brochure Design",
-      "Product Label Design",
-      "Menu & Packaging Design",
-      "Social Media Graphics",
-      "Infographics",
-      "UI/UX Design",
-    ],
     "Printing Services": [
       "Digital Printing",
       "Offset Printing",
@@ -169,30 +144,6 @@ const Navbar = () => {
       "UV Coating",
       "Large Format Printing",
       "Custom Printing Solutions",
-    ],
-    "Branding & Identity": [
-      "Signage & Banners",
-      "Custom Apparel Printing",
-      "Vehicle Wraps",
-      "Promotional Merchandise",
-      "Branded Packaging",
-      "Point of Sale Displays",
-      "Trade Show Displays",
-      "Custom Stamps & Seals",
-      "Event Branding",
-      "Franchise Branding Packages",
-    ],
-    "Custom Packaging": [
-      "Custom Box Design",
-      "Luxury Packaging",
-      "Eco-Friendly Packaging",
-      "Product Labels & Tags",
-      "Custom Inserts & Dividers",
-      "Tamper-Proof Packaging",
-      "Subscription Box Printing",
-      "Retail Shelf Displays",
-      "Branded Mailers",
-      "Food-Grade Packaging Solutions",
     ],
     "Signage & Large Format": [
       "Billboards & Outdoor Signage",
@@ -230,18 +181,6 @@ const Navbar = () => {
       "Custom Photo Calendars",
       "Passport & ID Printing",
     ],
-    "Web & Digital Services": [
-      "Website Design & Development",
-      "E-commerce Store Setup",
-      "SEO & Digital Marketing",
-      "Social Media Branding",
-      "Custom Email Signatures",
-      "QR Code Generation",
-      "Online Portfolio Setup",
-      "Interactive PDF & Digital Brochures",
-      "AR-Enabled Print Materials",
-      "Business Email & Hosting",
-    ],
     "Corporate Solutions": [
       "Bulk Printing Services",
       "Enterprise-Level Print Management",
@@ -253,6 +192,16 @@ const Navbar = () => {
       "VIP & Executive Gifting",
       "Corporate Identity Design",
       "Subscription-Based Printing Services",
+    ],
+    "Technology & Digital": [
+      "QR Code Stickers",
+      "Digital Business Cards",
+      "Smart NFC Cards",
+      "Branded USB Sticks",
+      "AR-Enhanced Prints",
+      "Interactive Print Materials",
+      "E-Gift Cards",
+      "Branded Website Templates",
     ],
   };
 
@@ -275,13 +224,23 @@ const Navbar = () => {
     }));
   };
 
+  const [selectedCategory, setSelectedCategory] = useState("Business Cards");
+  const [selectedSubCategory, setSelectedSubCategory] = useState("Standard");
+
   return (
     <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center rounded-[12px] relative w-full z-20">
       {/* Logo */}
-      <div className="text-2xl font-black">PrintByW</div>
+      <div className="text-2xl text-[#7f001e] font-black flex flex-row item-center cursor-pointer">
+        PrintBy
+        <img
+          src="/assets/logo2.png"
+          alt="PrintByW Logo"
+          className="w-[68px] -mt-3 -ml-1"
+        />
+      </div>
 
       {/* Desktop Menu */}
-      <NavigationMenu className="hidden lg:flex relative container max-w-screen-xl z-[110]">
+      <NavigationMenu className="hidden lg:flex relative container max-w-screen-3xl z-[110]">
         <NavigationMenuList className="flex space-x-3 font-medium">
           <NavigationMenuItem>
             <NavigationMenuLink href="#" className="hover:text-teal">
@@ -294,53 +253,43 @@ const Navbar = () => {
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          {/* Products Dropdown */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="flex items-center">
-              Products
+            <NavigationMenuTrigger>
+              <NavigationMenuLink href="#" className="hover:text-teal">
+                We Offer
+              </NavigationMenuLink>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="absolute left-0 right-0 lg:w-[80vw] bg-white shadow-lg grid gap-3 p-4 grid-cols-5">
-              {Object.entries(products).map(([category, items], index) => (
-                <div key={index}>
-                  <h3 className="font-semibold text-gray-700 mb-2">
-                    {category}
-                  </h3>
-                  {items.map((item, i) => (
-                    <NavigationMenuLink
-                      key={i}
-                      href="#"
-                      className="block text-gray-600 hover:text-teal whitespace-nowrap"
-                    >
-                      {item}
-                    </NavigationMenuLink>
-                  ))}
-                </div>
-              ))}
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+            {/* Full-Width Container */}
+            <NavigationMenuContent className="absolute left-0 right-0 lg:w-[50vw] bg-white shadow-lg grid gap-3 p-4 grid-cols-2">
+              {/* Left Column: Product Categories */}
+              <div className="flex flex-col border-r pr-6">
+                {Object.keys(products).map((category) => (
+                  <button
+                    key={category}
+                    className={`text-left font-bold py-2 px-3 rounded-md cursor-pointer hover:bg-gray-200 flex flex-row items-center justify-between ${
+                      selectedCategory === category ? "bg-gray-300" : ""
+                    }`}
+                    onMouseEnter={() => setSelectedCategory(category)}
+                  >
+                    {category} <ChevronRight />
+                  </button>
+                ))}
+              </div>
 
-          {/* Services Dropdown */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="flex items-center">
-              Services
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className="absolute left-0 right-0 lg:w-[80vw] bg-white shadow-lg grid gap-3 p-4 grid-cols-4">
-              {Object.entries(services).map(([category, items], index) => (
-                <div key={index}>
-                  <h3 className="font-semibold text-gray-700 mb-2">
-                    {category}
-                  </h3>
-                  {items.map((item, i) => (
-                    <NavigationMenuLink
-                      key={i}
-                      href="#"
-                      className="block text-gray-600 hover:text-teal whitespace-nowrap"
-                    >
-                      {item}
-                    </NavigationMenuLink>
-                  ))}
-                </div>
-              ))}
+              {/* Right Column: Products List */}
+              <div className="pl-6">
+                {products[selectedCategory].map((item, index) => (
+                  <p
+                    key={index}
+                    className={`text-left font-light py-2 px-3 rounded-md cursor-pointer hover:bg-gray-200 ${
+                      selectedSubCategory === item ? "bg-gray-200" : ""
+                    }`}
+                    onMouseEnter={() => setSelectedSubCategory(item)}
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
@@ -366,7 +315,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full h-screen overflow-scroll bg-white shadow-md p-4 flex flex-col space-y-3 justify-between lg:hidden z-[110] -mt-3">
+        <div className="absolute top-full left-0 w-full h-max overflow-scroll bg-white shadow-md p-4 flex flex-col space-y-3 justify-between lg:hidden z-[110] -mt-3 rounded-b-[12px]">
           <a href="#" className="hover:text-teal text-[20px]">
             Home
           </a>
@@ -379,12 +328,12 @@ const Navbar = () => {
             <h3 className="font-semibold text-gray-700 mb-2 text-[20px]">
               Products
             </h3>
-            <div className="grid grid-cols-1 gap-3">
+            <div className="grid grid-cols-1 gap-3 ml-3">
               {Object.entries(products).map(([category, items], index) => (
                 <div key={index}>
                   {/* Category Title (Clickable) */}
                   <h4
-                    className="text-gray-700 cursor-pointer font-semibold flex flex-row items-center gap-1 text-[14px]"
+                    className="text-gray-700 cursor-pointer font-semibold flex flex-row items-center w-full justify-between gap-1 text-[14px]"
                     onClick={() => toggleProductCategory(category)}
                   >
                     {category}{" "}
@@ -402,47 +351,7 @@ const Navbar = () => {
                         <a
                           key={i}
                           href="#"
-                          className="block text-gray-600 hover:text-teal text-sm"
-                        >
-                          {item}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Services Dropdown */}
-          <div>
-            <h3 className="font-semibold text-gray-700 mb-2 text-[20px]">
-              Services
-            </h3>
-            <div className="grid grid-cols-1 gap-3">
-              {Object.entries(services).map(([category, items], index) => (
-                <div key={index}>
-                  {/* Category Title (Clickable) */}
-                  <h4
-                    className="text-gray-700 cursor-pointer font-semibold flex flex-row items-center gap-1 text-[14px]"
-                    onClick={() => toggleServiceCategory(category)}
-                  >
-                    {category}{" "}
-                    {expandedServices[category] ? (
-                      <ChevronUp />
-                    ) : (
-                      <ChevronDown />
-                    )}
-                  </h4>
-
-                  {/* Show Items Only If Category is Expanded */}
-                  {expandedServices[category] && (
-                    <div className="pl-4">
-                      {items.map((item, i) => (
-                        <a
-                          key={i}
-                          href="#"
-                          className="block text-gray-600 hover:text-teal text-sm"
+                          className="block text-gray-600 hover:text-teal text-sm my-2"
                         >
                           {item}
                         </a>
